@@ -1,7 +1,7 @@
-function getNames() {
-  return 'A B C D E F'.split(' ');
+function getVowels() {
+  return 'A E I O U'.split(' ');
 }
 
-let [first, second, third, ...remaining] = getNames();
+let [first, second, third, ...remaining] = getVowels();
 
 console.log(remaining);
