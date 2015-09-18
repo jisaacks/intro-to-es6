@@ -3,10 +3,6 @@ import colors from 'colors';
 
 let waiting;
 
-// export function wait(promise) {
-//   waiting = promise;
-// }
-
 export function wait() {
   let cb;
   waiting = new Promise(function(resolve){
