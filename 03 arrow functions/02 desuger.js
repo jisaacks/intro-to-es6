@@ -1,7 +1,11 @@
 
-n => n + n
+// Arrow function
+
+(n => n + n);
 
 
-function(n) {
+// Equivalent
+
+(function(n) {
   return n + n;
-}
+});

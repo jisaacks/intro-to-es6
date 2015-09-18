@@ -1,17 +1,16 @@
+import {wait} from '../runner.js';
 
 let p = new Promise(function(resolve, reject){
   
   setTimeout(function() {
 
-    if (Math.random() > 0.5) {
-      resolve();
-    } else {
-      reject();
-    }
+    resolve();
 
   }, 100);
 
 });
+
+wait(p);
 
 p.then(function(){
   console.log('Promise completed!');

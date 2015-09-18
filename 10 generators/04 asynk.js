@@ -1,6 +1,7 @@
 import asynk from './03 runner';
 
 function getJSON(url) {
+  // mock url loading...
   return Promise.resolve(url);
 }
 

@@ -1,5 +1,6 @@
 function getJSON(url) {
-  //...
+  // mock url loading...
+  return Promise.resolve(url);
 }
 
 let articlePromise = getJSON('/articles/latest');

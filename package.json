@@ -1,0 +1,22 @@
+{
+  "name": "es6-talk",
+  "version": "1.0.0",
+  "description": "A talk for the Connect JS 2015 conference",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jisaacks/intro-to-es6.git"
+  },
+  "author": "JD Isaacks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jisaacks/intro-to-es6/issues"
+  },
+  "homepage": "https://github.com/jisaacks/intro-to-es6#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}

@@ -1,5 +1,6 @@
 function getJSON(url, cb) {
-  //...
+  // mock url loading...
+  cb(url);
 }
 
 getJSON('/articles/latest', function(err, article) {
