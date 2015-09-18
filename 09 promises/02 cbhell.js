@@ -1,7 +1,5 @@
-function getJSON(url, cb) {
-  // mock url loading...
-  cb(url);
-}
+import {wait, mockCallBack as getJSON} from '../helpers.js';
+let done = wait();
 
 getJSON('/articles/latest', function(err, article) {
   if (err) {
@@ -22,6 +20,8 @@ getJSON('/articles/latest', function(err, article) {
       }
 
       // all data loaded, good to go.
+      console.log(article, comments, data);
+      done();
     });
   });
 });

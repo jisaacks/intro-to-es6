@@ -1,5 +1,5 @@
 // Behave like a normal `forEach` but if any cb 
-// returns a promise, await for that promise to 
+// returns a promise, wait for that promise to 
 // resolve before iterating the next item in the 
 // list.
 

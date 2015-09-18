@@ -3,8 +3,16 @@ import colors from 'colors';
 
 let waiting;
 
-export function wait(promise) {
-  waiting = promise;
+// export function wait(promise) {
+//   waiting = promise;
+// }
+
+export function wait() {
+  let cb;
+  waiting = new Promise(function(resolve){
+    cb = resolve;
+  });
+  return cb;
 }
 
 async function runAsync(file) {

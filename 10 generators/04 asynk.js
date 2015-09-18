@@ -1,9 +1,6 @@
 import asynk from './03 runner';
-
-function getJSON(url) {
-  // mock url loading...
-  return Promise.resolve(url);
-}
+import {wait, mockPromise as getJSON} from '../helpers.js';
+let done = wait();
 
 asynk(function *() {
   let article  = yield getJSON('/articles/latest');
@@ -11,7 +8,11 @@ asynk(function *() {
   let data     = yield getJSON('/some/other/data');
   
   // all data loaded, good to go.
-}())
-.catch(function() {
+  console.log(article, comments, data);
+  done();
+
+}()).catch(function(err) {
   // handle error
+  console.log(err);
+  done();
 });

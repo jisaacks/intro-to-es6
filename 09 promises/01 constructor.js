@@ -1,21 +1,16 @@
-import {wait} from '../runner.js';
+import {wait} from '../helpers.js';
+let done = wait();
 
-let p = new Promise(function(resolve, reject){
-  
+new Promise(function(resolve, reject){
   setTimeout(function() {
-
-    resolve();
-
+    [resolve, reject][Math.round(Math.random())]();
   }, 100);
 
-});
-
-wait(p);
-
-p.then(function(){
+}).then(function(){
   console.log('Promise completed!');
-});
+  done();
 
-p.catch(function(){
+}).catch(function(){
   console.log('Promise failed!');
+  done();
 });

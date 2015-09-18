@@ -1,8 +1,5 @@
-
-
-function getJSON(url) {
-  return Promise.resolve(url);
-}
+import {wait, mockPromise as getJSON} from '../helpers.js';
+let done = wait();
 
 async function getAllData() {
   let article  = await getJSON('/articles/latest');
@@ -14,6 +11,11 @@ async function getAllData() {
 
 getAllData().then(function([article, comments, data]) {
   // all data loaded, good to go.
-}).catch(function() {
+  console.log(article, comments, data);
+  done();
+
+}).catch(function(err) {
   // handle error
+  console.log(err);
+  done();
 });
