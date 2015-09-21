@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import run from './runner.js';
-import awaitEach from './await_each.js'
+// import awaitEach from './await_each.js'
+import awaitEach from 'await-each'
 
 let dirs = [
   '01 variables',

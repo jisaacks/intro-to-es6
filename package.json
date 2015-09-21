@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jisaacks/intro-to-es6#readme",
   "dependencies": {
+    "await-each": "^1.1.0",
     "colors": "^1.1.2"
   }
 }
